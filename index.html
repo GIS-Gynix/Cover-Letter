@@ -6,17 +6,18 @@
   <title>Muhammad Junaid Baig — Cover Letter</title>
   <style>
     :root {
-      --bg:#0f1724;
-      --card:#0b1220;
-      --accent:#0ea5a4;
-      --muted:#94a3b8;
-      --text:#e6eef8;
+      --bg:#0d1117;          /* deep navy background */
+      --card:#161b22;        /* card background */
+      --accent:#4f46e5;      /* indigo accent */
+      --accent-light:#6366f1;
+      --muted:#9ca3af;       /* muted gray */
+      --text:#f3f4f6;        /* light text */
     }
     * { box-sizing:border-box; }
     body {
       margin:0;
       font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background:linear-gradient(180deg,#081226 0%, #071827 100%);
+      background:linear-gradient(180deg,#0d1117 0%, #111827 100%);
       color:var(--text);
       -webkit-font-smoothing:antialiased;
     }
@@ -27,42 +28,29 @@
       background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       border-radius:14px;
       border:1px solid rgba(255,255,255,0.05);
-      box-shadow:0 8px 30px rgba(2,6,23,0.6);
+      box-shadow:0 8px 30px rgba(0,0,0,0.6);
     }
     header {
       display:flex;
       align-items:center;
       gap:18px;
-      border-bottom:1px solid rgba(255,255,255,0.05);
+      border-bottom:1px solid rgba(255,255,255,0.08);
       padding-bottom:16px;
     }
     .avatar {
       width:84px;
       height:84px;
       border-radius:12px;
-      background:linear-gradient(135deg,var(--accent),#6ee7b7);
+      background:linear-gradient(135deg,var(--accent),var(--accent-light));
       display:flex;
       align-items:center;
       justify-content:center;
       font-weight:700;
       font-size:22px;
-      color:#042027;
+      color:#fff;
     }
     h1 { margin:0; font-size:22px; }
-    p.lead { margin:6px 0 14px; color:var(--muted); }
-    .meta {
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:8px;
-    }
-    .pill {
-      background:rgba(255,255,255,0.04);
-      padding:6px 10px;
-      border-radius:10px;
-      color:var(--muted);
-      font-size:13px;
-    }
+    p.lead { margin:6px 0 0; color:var(--muted); }
     main {
       display:grid;
       grid-template-columns:1fr 300px;
@@ -70,19 +58,18 @@
       margin-top:20px;
     }
     .card {
-      background:rgba(255,255,255,0.02);
+      background:var(--card);
       padding:20px;
       border-radius:12px;
       border:1px solid rgba(255,255,255,0.05);
     }
     .cover {
       line-height:1.7;
-      color:#dbeafe;
       font-size:15px;
     }
     .cover h2 {
       margin-top:0;
-      color:var(--accent);
+      color:var(--accent-light);
       font-size:18px;
     }
     aside { position:relative; }
@@ -97,15 +84,15 @@
       padding:10px 14px;
       border-radius:10px;
       background:var(--accent);
-      color:#042027;
+      color:#fff;
       text-decoration:none;
       font-weight:600;
       transition:background 0.2s;
     }
-    .btn:hover { background:#12b8b7; }
+    .btn:hover { background:var(--accent-light); }
     .ghost {
       background:transparent;
-      border:1px solid rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.2);
       color:var(--text);
       padding:8px 12px;
       border-radius:10px;
@@ -113,7 +100,7 @@
       font-size:14px;
       transition:all 0.2s;
     }
-    .ghost:hover { border-color:var(--accent); color:var(--accent); }
+    .ghost:hover { border-color:var(--accent-light); color:var(--accent-light); }
     footer {
       margin-top:24px;
       text-align:center;
@@ -121,7 +108,7 @@
       font-size:13px;
     }
     code {
-      background:rgba(255,255,255,0.05);
+      background:rgba(255,255,255,0.08);
       padding:2px 6px;
       border-radius:6px;
       font-size:12px;
@@ -139,11 +126,6 @@
       <div>
         <h1>Muhammad Junaid Baig</h1>
         <p class="lead">GIS Analyst • Remote Sensing Specialist • Python Automation</p>
-        <div class="meta">
-          <div class="pill">Rawalpindi, Pakistan</div>
-          <div class="pill">+92 304 733 5971</div>
-          <div class="pill">mirzajunaid887@gmail.com</div>
-        </div>
       </div>
     </header>
 
@@ -170,7 +152,7 @@
 
         <p>Sincerely,<br><strong>Muhammad Junaid Baig</strong></p>
 
-        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:18px 0">
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.1);margin:18px 0">
 
         <p style="font-size:13px;color:var(--muted)">
           Quick highlights: <code>ArcGIS/QGIS</code> • <code>Python Automation</code> • <code>Google Earth Engine</code> • <code>Cadastral Mapping</code>
@@ -179,7 +161,7 @@
 
       <aside>
         <div class="card">
-          <h3 style="margin-top:0">Contact</h3>
+          <h3 style="margin-top:0;color:var(--accent-light)">Contact</h3>
           <div class="contact-list">
             <div><strong>Email:</strong> <a href="mailto:mirzajunaid887@gmail.com" style="color:var(--text)">mirzajunaid887@gmail.com</a></div>
             <div><strong>Phone:</strong> +92 304 733 5971</div>
@@ -205,10 +187,11 @@
         const el = document.createElement('span');
         el.textContent = 'Copied!';
         el.style.marginLeft='8px';
-        el.style.color='var(--accent)';
+        el.style.color='var(--accent-light)';
         this.parentNode.appendChild(el);
         setTimeout(()=>el.remove(),1500);
       });
     });
   </script>
 </body>
+</html>
