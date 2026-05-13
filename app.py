@@ -4,7 +4,7 @@ import re
 
 # --- CONFIGURATION ---
 # Use the standard Google Sheets URL (Anyone with link can view)
-SHEET_URL = "https://docs.google.com/spreadsheets/d/1dvuymQqn8ytxc18pPWr-csqZ_Ke8whO3UCIa6x6XBto/edit?gid=0#gid=0"
+SHEET_URL = "https://docs.google.com/spreadsheets/d/1dvuymQqn8ytxc18pPWr-csqZ_Ke8whO3UCIa6x6XBto/edit?usp=sharing"
 
 def get_ss_id(url):
     """Extracts the unique spreadsheet ID from the URL."""
